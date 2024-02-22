@@ -1,0 +1,10 @@
+def insertion_sort(xen):
+    for i in range(1, len(xen)):
+        key = xen[i]
+        j = i - 1
+        # Here we don't swap elements but we shift the larger values to the right
+        while j >= 0 and xen[j] > key:
+            xen[j + 1] = xen[j]
+            j -= 1
+        xen[j + 1] = key
+    return xen
